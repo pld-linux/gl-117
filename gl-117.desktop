@@ -7,4 +7,5 @@ Exec=gl-117
 Icon=gl-117.png
 Terminal=0
 Type=Application
+Categories=Application;Game;ArcadeGame;
 # vi: encoding=utf-8
