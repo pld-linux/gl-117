@@ -16,7 +16,6 @@ BuildRequires:	autoconf
 BuildRequires:	automake >= 1.6
 BuildRequires:	glut-devel
 BuildRequires:	libstdc++-devel
-BuildRequires:	textutils
 Requires:	OpenGL
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
