@@ -2,7 +2,7 @@
 Name=GL-117
 Comment=An OpenGL and SDL based action flight simulator
 Comment[de]=Ein OpenGL- und SDL-basierter Flugsimulator
-Comment[pl]=Zrêcznoo¶ciowy symulator lotu uu¿ywajj±cy OpenGL i SDL
+Comment[pl]=Zręcznościowy symulator lotu używający OpenGL i SDL
 Exec=gl-117
 Icon=gl-117.png
 Terminal=0
