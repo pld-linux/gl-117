@@ -3,7 +3,7 @@ Summary(de):	Ein OpenGL- und SDL-basierter Flugsimulator
 Summary(pl):	Zrêczno¶ciowy symulator lotu u¿ywaj±cy OpenGL i SDL
 Name:		gl-117
 Version:	0.8.8
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Games
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
@@ -20,8 +20,6 @@ BuildRequires:	textutils
 Requires:	OpenGL
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix	/usr/X11R6
-%define		_mandir	%{_prefix}/man
 %define		_noautoreqdep	libGL.so.1 libGLU.so.1
 
 %description
@@ -49,22 +47,22 @@ pozwalaj± idealnie dopasowaæ grê do wydajno¶ci systemu.
 %setup -q
 
 %build
-aclocal
-autoheader
-%{__automake}
+%{__aclocal}
 %{__autoconf}
+%{__autoheader}
+%{__automake}
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 %configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_mandir}/man6,%{_applnkdir}/Games/Arcade,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_mandir}/man6,%{_datadir}/applications,%{_pixmapsdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Arcade
+install %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/applications
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 install doc/*.6 $RPM_BUILD_ROOT%{_mandir}/man6
 
@@ -77,5 +75,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/%{name}
 %{_datadir}/%{name}
 %{_mandir}/man6/*
-%{_applnkdir}/Games/Arcade/*
+%{_datadir}/applications/*
 %{_pixmapsdir}/*
