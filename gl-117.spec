@@ -2,15 +2,15 @@ Summary:	An OpenGL and SDL based action flight simulator
 Summary(de):	Ein OpenGL- und SDL-basierter Flugsimulator
 Summary(pl):	Zrêczno¶ciowy symulator lotu u¿ywaj±cy OpenGL i SDL
 Name:		gl-117
-Version:	1.2
+Version:	1.3
 Release:	1
 License:	GPL
 Group:		Applications/Games
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}-src.tar.gz
-# Source0-md5:	15212176c863f35f49a1f766eaa5c79a
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}-src.tar.bz2
+# Source0-md5:	38740f8d354416d3ae30f1b0e1c203c7
 Source1:	%{name}.desktop
 Source2:	%{name}.png
-URL:		http://home.t-online.de/home/Primetime./gl-117/
+URL:		http://home.t-online.de/home/Primetime./gl-117/gl-117.htm
 BuildRequires:	OpenGL-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	glut-devel
@@ -64,7 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README doc/gl-117.pdf
+%doc AUTHORS ChangeLog FAQ NEWS README doc/gl-117.pdf
 %attr(755,root,root) %{_bindir}/%{name}
 %{_datadir}/%{name}
 %{_mandir}/man6/*
