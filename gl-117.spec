@@ -57,12 +57,12 @@ CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_mandir}/man6,%{_datadir}/applications,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_mandir}/man6,%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/applications
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 install doc/*.6 $RPM_BUILD_ROOT%{_mandir}/man6
 
@@ -75,5 +75,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/%{name}
 %{_datadir}/%{name}
 %{_mandir}/man6/*
-%{_datadir}/applications/*
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
