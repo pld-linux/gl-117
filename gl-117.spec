@@ -1,4 +1,3 @@
-
 Summary:	An OpenGL and SDL based action flight simulator
 Summary(de):	Ein OpenGL- und SDL-basierter Flugsimulator
 Summary(pl):	Zrêczno¶ciowy symulator lotu u¿ywaj±cy OpenGL i SDL
@@ -8,21 +7,17 @@ Release:	1
 License:	GPL
 Group:		Applications/Games
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-Source1:        %{name}.desktop
-Source2:        %{name}.png
-URL:		http://home.t-online.de/home/Primetime./gl-117
+Source1:	%{name}.desktop
+Source2:	%{name}.png
+URL:		http://home.t-online.de/home/Primetime./gl-117/
+BuildRequires:	OpenGL-devel
+BuildRequires:	SDL_mixer-devel
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1.6
 BuildRequires:	glut-devel
-BuildRequires:	OpenGL-devel
-BuildRequires:	SDL-devel
-BuildRequires:	SDL_mixer-devel
-BuildRequires:	XFree86-devel
+BuildRequires:	libstdc++-devel
 BuildRequires:	textutils
-Requires:	glut
 Requires:	OpenGL
-Requires:	SDL
-Requires:	SDL_mixer
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix	/usr/X11R6
@@ -58,26 +53,29 @@ aclocal
 autoheader
 %{__automake}
 %{__autoconf}
-%configure CXXFLAGS="-ffast-math -fomit-frame-pointer -fexpensive-optimizations -fno-rtti -fno-exceptions"
+CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
+%configure
 %{__make}
 
 %install
-%makeinstall
-install -d $RPM_BUILD_ROOT{%{_applnkdir}/Games/Arcade,%{_pixmapsdir}}
+rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_mandir}/man6,%{_applnkdir}/Games/Arcade,%{_pixmapsdir}}
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Arcade
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
-install -d $RPM_BUILD_ROOT%{_mandir}/man6
 install doc/*.6 $RPM_BUILD_ROOT%{_mandir}/man6
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc AUTHORS ChangeLog NEWS README doc/gl-117.pdf
 %attr(755,root,root) %{_bindir}/%{name}
 %{_datadir}/%{name}
-%doc AUTHORS ChangeLog NEWS README doc/gl-117.pdf
 %{_mandir}/man6/*
 %{_applnkdir}/Games/Arcade/*
 %{_pixmapsdir}/*
