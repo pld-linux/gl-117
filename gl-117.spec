@@ -7,6 +7,7 @@ Release:	2
 License:	GPL
 Group:		Applications/Games
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	c318fc921164ecf8e03282b7cc64c5aa
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://home.t-online.de/home/Primetime./gl-117/
