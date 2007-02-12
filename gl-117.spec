@@ -1,6 +1,6 @@
 Summary:	An OpenGL and SDL based action flight simulator
-Summary(de):	Ein OpenGL- und SDL-basierter Flugsimulator
-Summary(pl):	Zrêczno¶ciowy symulator lotu u¿ywaj±cy OpenGL i SDL
+Summary(de.UTF-8):   Ein OpenGL- und SDL-basierter Flugsimulator
+Summary(pl.UTF-8):   ZrÄ™cznoÅ›ciowy symulator lotu uÅ¼ywajÄ…cy OpenGL i SDL
 Name:		gl-117
 Version:	1.3.2
 Release:	1
@@ -27,19 +27,19 @@ and joystick support. Predefined levels of video quality and an amount
 of viewing ranges let you perfectly adjust the game to the performance
 of your system.
 
-%description -l de
+%description -l de.UTF-8
 GL-117 ist ein in C++ entwickelter, OpenGL- und SDL-basierter
 Action-Flugsimulator. Neben per Zufall erzeugten Landschaften besticht
-das Spiel durch Lichteffekte, Sound und Joystickunterstützung. Anhand
-vordefinierter Qualitätsstufen lässt sich die Grafik optimal an die
+das Spiel durch Lichteffekte, Sound und JoystickunterstÃ¼tzung. Anhand
+vordefinierter QualitÃ¤tsstufen lÃ¤sst sich die Grafik optimal an die
 Leistung des eigenen Systems anpassen.
 
-%description -l pl
-GL-117 jest zrêczno¶ciowym symulatorem lotu napisanym w C++,
-wykorzystuj±cym biblioteki OpenGL i SDL. Posiada obs³ugê joysticka,
-d¼wiêk, losowo generowany teren, efekty ¶wietlne. Predefiniowane
-poziomy jako¶ci obrazu oraz szeroki zakres ustawieñ widoczno¶ci
-pozwalaj± idealnie dopasowaæ grê do wydajno¶ci systemu.
+%description -l pl.UTF-8
+GL-117 jest zrÄ™cznoÅ›ciowym symulatorem lotu napisanym w C++,
+wykorzystujÄ…cym biblioteki OpenGL i SDL. Posiada obsÅ‚ugÄ™ joysticka,
+dÅºwiÄ™k, losowo generowany teren, efekty Å›wietlne. Predefiniowane
+poziomy jakoÅ›ci obrazu oraz szeroki zakres ustawieÅ„ widocznoÅ›ci
+pozwalajÄ… idealnie dopasowaÄ‡ grÄ™ do wydajnoÅ›ci systemu.
 
 %prep
 %setup -q -n %{name}-%{version}-src
