@@ -1,6 +1,6 @@
 Summary:	An OpenGL and SDL based action flight simulator
-Summary(de.UTF-8):   Ein OpenGL- und SDL-basierter Flugsimulator
-Summary(pl.UTF-8):   Zręcznościowy symulator lotu używający OpenGL i SDL
+Summary(de.UTF-8):	Ein OpenGL- und SDL-basierter Flugsimulator
+Summary(pl.UTF-8):	Zręcznościowy symulator lotu używający OpenGL i SDL
 Name:		gl-117
 Version:	1.3.2
 Release:	1
