@@ -13,7 +13,7 @@ Source2:	%{name}.png
 URL:		http://home.t-online.de/home/Primetime./gl-117/gl-117.htm
 BuildRequires:	OpenGL-devel
 BuildRequires:	SDL_mixer-devel
-BuildRequires:	glut-devel
+BuildRequires:	OpenGL-glut-devel
 BuildRequires:	libstdc++-devel
 Requires:	OpenGL
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
